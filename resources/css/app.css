@@ -26,3 +26,7 @@ html {
 .input-error {
     @apply border-2 border-error;
 }
+
+.page-wrapper {
+    @apply container w-full max-w-6xl mx-auto p-6;
+}

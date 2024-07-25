@@ -45,10 +45,10 @@
                     <x-tabler-user-cog class="size-5" />
                     <span>Edit Profile</span>
                 </a>
-                <a href="" wire:navigate @class(['active' => false])>
+                <button href="" wire:click="logout">
                     <x-tabler-logout class="size-5" />
                     <span>Logout</span>
-                </a>
+                </button>
             </li>
         </ul>
     </li>
