@@ -18,7 +18,7 @@
         <h2>Data Master</h2>
         <ul>
             <li>
-                <a href="" wire:navigate @class(['active' => false])>
+                <a href="{{ route('menu.index') }}" wire:navigate @class(['active' => Route::is('menu.index')])>
                     <x-tabler-tools-kitchen-2 class="size-5" />
                     <span>Menu Makanan</span>
                 </a>

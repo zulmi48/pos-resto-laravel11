@@ -6,7 +6,11 @@
 
 html {
     font-family: "Montserrat", sans-serif;
-    @apply font-semibold;
+    @apply font-semibold scrollbar-hide;
+}
+
+thead {
+    @apply bg-base-200/50 border-b-4 border-base-300;
 }
 
 .card {
@@ -28,5 +32,13 @@ html {
 }
 
 .page-wrapper {
-    @apply container w-full max-w-6xl mx-auto p-6;
+    @apply container w-full max-w-6xl mx-auto p-6 space-y-6;
+}
+
+.table-wrapper {
+    @apply bg-base-100 border-2 border-base-300 overflow-x-auto rounded-lg whitespace-nowrap;
+}
+
+.modal-box {
+    @apply scrollbar-hide;
 }
