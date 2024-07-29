@@ -11,6 +11,9 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/profile', \App\Livewire\Auth\Profile::class)->name('profile');
     Route::get('/menu', \App\Livewire\Menu\Index::class)->name('menu.index');
     Route::get('/customer', \App\Livewire\Customer\Index::class)->name('customer.index');
+    Route::get('/transaction', \App\Livewire\Transaction\Index::class)->name('transaction.index');
+    Route::get('/transaction/create', \App\Livewire\Transaction\Actions::class)->name('transaction.create');
+    Route::get('/transaction/{transaction}/edit', \App\Livewire\Transaction\Actions::class)->name('transaction.edit');
 });
 
 Route::middleware(['guest'])->group(function () {

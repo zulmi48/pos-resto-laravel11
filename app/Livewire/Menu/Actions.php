@@ -56,6 +56,7 @@ class Actions extends Component
     public function closeModal()
     {
         $this->show = false;
+        $this->photo = null;
         $this->form->reset();
     }
 

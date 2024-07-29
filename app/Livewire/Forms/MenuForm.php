@@ -11,7 +11,7 @@ class MenuForm extends Form
     public $name;
     public $price;
     public $desc;
-    public $type = 'Non-Coffee';
+    public $type = 'Sarapan';
     public $photo;
     public ?Menu $menu;
 

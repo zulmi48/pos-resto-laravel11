@@ -21,10 +21,11 @@ class MenuFactory extends Factory
             "price" => fake()->randomNumber(5),
             "desc" => fake()->sentence(),
             "type" => fake()->randomElement([
-                "Coffee",
-                "Non-Coffee",
-                "Snack",
-                "Dessert",
+                'Sarapan',
+                'Makan Siang',
+                'Makan Malam',
+                'Camilan',
+                'Minuman',
             ]),
             "photo" => "default.png",
         ];

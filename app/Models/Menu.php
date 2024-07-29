@@ -20,10 +20,11 @@ class Menu extends Model
     ];
 
     public static $types = [
-        'Coffee',
-        'Non-Coffee',
-        'Snack',
-        'Dessert',
+        'Sarapan',
+        'Makan Siang',
+        'Makan Malam',
+        'Camilan',
+        'Minuman',
     ];
 
     public function getHargaAttribute()

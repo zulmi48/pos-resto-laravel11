@@ -7,7 +7,7 @@
                     <x-tabler-dashboard class="size-5" />
                     <span>Dashboard</span>
                 </a>
-                <a href="" wire:navigate @class(['active' => false])>
+                <a href="{{ route('transaction.create') }}" wire:navigate @class(['active' => Route::is('transaction.create')])>
                     <x-tabler-transfer class="size-5" />
                     <span>Input Transaksi</span>
                 </a>
@@ -30,7 +30,7 @@
                 </a>
             </li>
             <li>
-                <a href="" wire:navigate @class(['active' => false])>
+                <a href="{{ route('transaction.index') }}" wire:navigate @class(['active' => Route::is('transaction.index')])>
                     <x-tabler-history class="size-5" />
                     <span>Riwayat Transaksi</span>
                 </a>

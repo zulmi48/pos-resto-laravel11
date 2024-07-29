@@ -42,14 +42,18 @@
                         </td>
                         <td>
                             <div class="flex justify-center gap-1">
-                                <button class="btn btn-xs btn-square"
-                                    wire:click="$dispatch('editMenu', {menu : {{ $menu->id }}})">
-                                    <x-tabler-edit class="size-4" />
-                                </button>
-                                <button class="btn btn-xs btn-square"
-                                    wire:click="$dispatch('deleteMenu', {menu : {{ $menu->id }}})">
-                                    <x-tabler-trash class="size-4" />
-                                </button>
+                                <div class="tooltip tooltip-left" data-tip="Edit Menu">
+                                    <button class="btn btn-xs btn-square"
+                                        wire:click="$dispatch('editMenu', {menu : {{ $menu->id }}})">
+                                        <x-tabler-edit class="size-4" />
+                                    </button>
+                                </div>
+                                <div class="tooltip tooltip-left" data-tip="Hapus Menu">
+                                    <button class="btn btn-xs btn-square"
+                                        wire:click="$dispatch('deleteMenu', {menu : {{ $menu->id }}})">
+                                        <x-tabler-trash class="size-4" />
+                                    </button>
+                                </div>
                             </div>
                         </td>
                     </tr>
