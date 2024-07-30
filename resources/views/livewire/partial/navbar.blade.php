@@ -8,8 +8,8 @@
         <a class="btn btn-ghost text-xl" href="{{ route('home') }}" wire:navigate>{{ config('app.name') }}</a>
     </div>
     <div class="navbar-end">
-        <button class="btn btn-ghost btn-circle">
+        <a href="{{ route('transaction.create') }}" class="btn btn-ghost btn-circle">
             <x-tabler-plus class="size-5" />
-        </button>
+        </a>
     </div>
 </div>

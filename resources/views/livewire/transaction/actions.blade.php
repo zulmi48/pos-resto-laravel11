@@ -1,5 +1,5 @@
 <div class="page-wrapper">
-    <div class="grid grid-cols-2 gap-6">
+    <div class="grid md:grid-cols-2 gap-6">
         <div class="card card-divider h-fit">
             <div class="card-body">
                 <input type="search" class="input input-bordered" placeholder="Cari..." wire:model.live="search">
@@ -26,7 +26,10 @@
             <form class="card-body space-y-4 " wire:submit="simpan">
                 <h3 class="card-title">Detail Transaksi</h3>
                 <!-------------------------------------------------->
-                <div @class(['table-wrapper', 'border-error' => $errors->first('items')])>
+                <div @class([
+                    'table-wrapper',
+                    'border-error' => $errors->first('form.items'),
+                ])>
                     <table class="table">
                         <thead>
                             <th>No</th>
@@ -70,7 +73,7 @@
                 <div class="card-actions justify-between">
                     <div class="flex flex-col">
                         <div class="text-xs">Total Harga</div>
-                        <div @class(['card-title', 'text-error' => $errors->first('items')])>Rp. {{ Number::format($this->getTotalPrice()) }}</div>
+                        <div @class(['card-title', 'text-error' => $errors->first('form.items')])>Rp. {{ Number::format($this->getTotalPrice()) }}</div>
                     </div>
                     <button class="btn btn-primary">
                         <x-tabler-check class="size-5" />

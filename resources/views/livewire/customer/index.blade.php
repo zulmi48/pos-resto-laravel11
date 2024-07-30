@@ -1,5 +1,5 @@
 <div class="page-wrapper ">
-    <div class="flex justify-between">
+    <div class="flex flex-col md:flex-row gap-2 md:justify-between">
         <input wire:model.live="search" type="search" class="input input-bordered" placeholder="Cari...">
 
         <button class="btn btn-primary" wire:click="$dispatch('createCustomer')">

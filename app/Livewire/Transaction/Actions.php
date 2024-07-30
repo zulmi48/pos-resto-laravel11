@@ -59,10 +59,6 @@ class Actions extends Component
 
     public function simpan()
     {
-        $this->validate([
-            'items' => 'required',
-        ]);
-
         $this->form->items = $this->items;
         $this->form->price = $this->getTotalPrice();
 
