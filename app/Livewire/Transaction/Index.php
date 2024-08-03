@@ -30,7 +30,7 @@ class Index extends Component
         return view('livewire.transaction.index', [
             'transactions' => Transaction::when($this->date, function ($transaction) {
                 $transaction->whereDate('created_at', $this->date);
-            })->get(),
+            })->latest()->get(),
         ]);
     }
 }

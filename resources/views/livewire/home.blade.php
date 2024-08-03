@@ -52,6 +52,7 @@
                 <th>Customer</th>
                 <th>Total Bayar</th>
                 <th>Status</th>
+                <th>Struk</th>
             </thead>
             <tbody>
                 @foreach ($datas as $data)
@@ -64,6 +65,13 @@
                         <td>
                             <input type="checkbox" class="toggle toggle-sm toggle-primary" @checked($data->is_done)
                                 wire:change="toggleDone({{ $data->id }})" />
+                        </td>
+                        <td>
+                            <button class="btn btn-xs"
+                                onclick="return cetakStruk('{{ route('transaction.cetak', $data) }}')">
+                                <x-tabler-printer class="size-5" />
+                                <span>Cetak</span>
+                            </button>
                         </td>
                     </tr>
                 @endforeach

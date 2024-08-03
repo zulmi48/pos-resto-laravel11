@@ -30,7 +30,9 @@
                 </a>
             </li>
             <li>
-                <a href="{{ route('transaction.index') }}" wire:navigate @class(['active' => Route::is('transaction.index')])>
+                <a href="{{ route('transaction.index') }}" wire:navigate @class([
+                    'active' => Route::is(['transaction.index', 'transaction.export']),
+                ])>
                     <x-tabler-history class="size-5" />
                     <span>Riwayat Transaksi</span>
                 </a>
