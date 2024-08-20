@@ -1,6 +1,6 @@
 <div class="page-wrapper">
     <div class="flex flex-col md:flex-row gap-2 md:justify-between">
-        <input type="date" class="input input-bordered" wire:model.live="date">
+        <input type="month" class="input input-bordered" wire:model.live="date">
         <a href="{{ route('transaction.export') }}" class="btn btn-primary" wire:navigate>
             <x-tabler-upload class="size-5" />
             <span>Export Transaksi</span>

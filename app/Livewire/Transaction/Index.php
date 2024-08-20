@@ -22,15 +22,19 @@ class Index extends Component
 
     public function mount()
     {
-        $this->date = now()->format('Y-m-d');
+        $this->date = now()->format('Y-m');
     }
 
     public function render()
     {
         return view('livewire.transaction.index', [
-            'transactions' => Transaction::when($this->date, function ($transaction) {
-                $transaction->whereDate('created_at', $this->date);
-            })->latest()->get(),
+            'transactions' => Transaction::whereMonth('created_at', date('m', strtotime($this->date)))
+                ->whereYear('created_at', date('Y', strtotime($this->date)))
+                ->latest()
+                ->get(),
         ]);
+        // ->when($this->date, function ($transaction) {
+        //     $transaction->whereDate('created_at', $this->date);
+        // })
     }
 }
